@@ -2,6 +2,7 @@
 pub mod tests;
 
 use super::super::constants::HTTP_METHODS;
+use serde::{Serialize, Deserialize};
 
 #[derive(Debug, PartialEq,Serialize, Deserialize)]
 pub struct Api {
