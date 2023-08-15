@@ -11,5 +11,5 @@ fn create_valid_url(){
     let result = Api::new(url,method,parameter);
 
     // then
-    assert_eq!(result, Api{url:String::from("/api/v1/hoge"),method:String::from("GET"),parameter:Vec::new()});
+    assert_eq!(result, Ok(Api { url: String::from("/api/v1/hoge"), method: String::from("GET"), parameter: Vec::new() }));
 }

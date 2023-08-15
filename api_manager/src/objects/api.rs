@@ -9,11 +9,11 @@ pub struct Api{
 }
 
 impl Api {
-    pub fn new(url:String,method:String,parameter:Vec<String>)->Api{
-        Api{
+    pub fn new(url:String,method:String,parameter:Vec<String>)->Result<Api,String>{
+        Ok(Api {
             url,
             method,
-            parameter
-        }
+            parameter,
+        })
     }
 }
