@@ -1,5 +1,6 @@
 use std::fs;
 use serde_json::json;
+use super::super::constants::FILE_NAME;
 use super::*;
 
 #[tokio::test]
@@ -15,6 +16,6 @@ async fn store_json_string() {
     store(&value).await.unwrap();
 
     // then
-    let content = fs::read_to_string("api_manager.json").unwrap();
-    assert_eq!(content, serde_json::to_string_pretty(&value).unwrap()+"\n");
+    let content = fs::read_to_string(FILE_NAME).unwrap();
+    assert_eq!(content, serde_json::to_string_pretty(&value).unwrap() + "\n");
 }
