@@ -3,7 +3,7 @@ pub mod tests;
 
 use super::super::constants::HTTP_METHODS;
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq,Serialize, Deserialize)]
 pub struct Api {
     url: String,
     method: String,
