@@ -1,0 +1,7 @@
+{
+  "method": "GET",
+  "parameter": [
+    "email"
+  ],
+  "url": "/api/v1/hoge"
+}

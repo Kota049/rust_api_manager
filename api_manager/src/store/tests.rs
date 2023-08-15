@@ -12,9 +12,9 @@ async fn store_json_string() {
     });
 
     // when
-    store(value.clone()).await;
+    store(&value).await.unwrap();
 
     // then
     let content = fs::read_to_string("api_manager.json").unwrap();
-    assert_eq!(content, value.to_string());
+    assert_eq!(content, serde_json::to_string_pretty(&value).unwrap()+"\n");
 }
