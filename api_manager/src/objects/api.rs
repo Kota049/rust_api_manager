@@ -12,6 +12,7 @@ pub struct Api {
 
 impl Api {
     pub fn new(url: String, method: String, parameter: Vec<String>) -> Result<Api, String> {
+        let method  = method.to_uppercase();
         validate_url(&url)?;
         validate_method(&method)?;
         Ok(Api {
