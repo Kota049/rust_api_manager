@@ -6,7 +6,6 @@ use serde_json::Value;
 use std::fs::File;
 use std::io::Write;
 use std::io::Error;
-use serde_json::json;
 use super::constants::FILE_NAME;
 
 

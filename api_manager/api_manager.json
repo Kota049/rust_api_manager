@@ -1,7 +1,16 @@
-{
-  "method": "GET",
-  "parameter": [
-    "email"
-  ],
-  "url": "/api/v1/hoge"
-}
+[
+  {
+    "method": "GET",
+    "parameter": [
+      "email"
+    ],
+    "url": "/api/v1/hoge"
+  },
+  {
+    "method": "GET",
+    "parameter": [
+      "email2"
+    ],
+    "url": "/api/v1/hoge2"
+  }
+]
