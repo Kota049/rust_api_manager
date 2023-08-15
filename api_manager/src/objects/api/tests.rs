@@ -25,5 +25,5 @@ fn url_heading_non_slash_return_error(){
     let result = Api::new(url,method,parameter);
 
     // then
-    assert_eq!(result, Ok(String::from("不正なURLです(url should be start with /)")));
+    assert_eq!(result, Err(String::from("不正なURLです(url should be start with /)")));
 }
