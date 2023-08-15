@@ -21,7 +21,7 @@ impl Api {
 
 fn validate_url(url: &str) -> Result<(), String> {
     if !url.starts_with('/') {
-        return Err(String::from("不正なURLです(url should be start with /)"));
+        return Err(String::from("Invalid URL(url should be start with /)"));
     }
     Ok(())
 }

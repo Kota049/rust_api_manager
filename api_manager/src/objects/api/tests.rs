@@ -25,5 +25,19 @@ fn url_heading_non_slash_return_error() {
     let result = Api::new(url, method, parameter);
 
     // then
-    assert_eq!(result, Err(String::from("不正なURLです(url should be start with /)")));
+    assert_eq!(result, Err(String::from("Invalid URL(url should be start with /)")));
+}
+
+#[test]
+fn invalid_method_return_error() {
+    // given
+    let url = String::from("/api/v1/hoge");
+    let method = String::from("hoge");
+    let parameter = Vec::new();
+
+    // when
+    let result = Api::new(url, method, parameter);
+
+    // then
+    assert_eq!(result, Err(String::from("Invalid Method(method should be http method[GET,POST,PUT,DELETE])")));
 }
