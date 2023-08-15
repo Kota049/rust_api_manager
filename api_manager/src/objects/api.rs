@@ -11,6 +11,9 @@ pub struct Api {
 impl Api {
     pub fn new(url: String, method: String, parameter: Vec<String>) -> Result<Api, String> {
         validate_url(&url)?;
+        if &method == "hoge" {
+            return Err(String::from("Invalid Method(method should be http method[GET,POST,PUT,DELETE])"));
+        }
         Ok(Api {
             url,
             method,
